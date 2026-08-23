@@ -1,30 +1,31 @@
-# Viet Nguyen
+# Hi, I'm Viet 👋
 
-CS @ University of South Florida. I work on backend systems — state, consistency, concurrency, and what happens when things fail mid-write.
+<div align="center">
+  <a href="https://www.linkedin.com/in/nnviet/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:nnviet2016@gmail.com">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</div>
 
-**Currently**
+CS @ University of South Florida. I work on backend systems at scale (distributed architectures, transactional data), focused on concurrency and failure recovery. Comfortable with the full stack when a project needs it. On the research side, GPU partitioning and scheduling for ML workloads.
 
-- GPU partitioning and scheduling for real-time systems (autonomous driving workloads) at the RTS Lab
-- Backend engineering intern at a fintech unicorn — Java, Vert.x, Kafka, Redis, gRPC
-- Building internal tooling on C#/.NET and SignalR for the USF Honors College
+## Recently
 
-**Selected work**
+- Software engineering intern at MoMo, a fintech unicorn (2026): shipped an event-driven onboarding platform to 40+ engineers, then re-architected state ownership and extended it into a 30M+ user payment system.
+- Software developer at USF Honors College (2026–Present): building USF's Research Portal serving 30k+ students and faculty.
+- Research assistant at USF Real-Time Systems Lab (2025–Present): improving GPU predictability for ML workloads by profiling interference between concurrent kernels.
 
-[**fault-tolerant-payment-service**](https://github.com/nnviet06/fault-tolerant-payment-service) — Append-only, hash-chained payment ledger on Vert.x. Every debit passes a row lock and a database-enforced invariant, so 100 concurrent withdrawals against one balance produce 0 overdrafts. Idempotency claim, ledger write, and outbox event commit in one ACID transaction: 235 transfers/sec at 0 errors, stranded events recovered in 30 ms median. A 9-scenario JUnit harness boots the real service as a subprocess, kills it mid-transaction, and blacks out Redis to prove each guarantee.
+## Featured projects
 
-[**honors-inventory-system**](https://github.com/nnviet06/honors-inventory-system) — Rebuilt a single-user prototype into a multi-user system: state moved out of a redeploy-wiped SQLite file into Postgres behind a separately deployed API. Found and fixed a silent multi-tenant bug where every user read the same dataset. Pagination and multi-field filtering pushed out of the browser into indexed queries — 2,000+ items/user, 99% smaller per-request payloads.
+[**fault-tolerant-payment-service**](https://github.com/nnviet06/fault-tolerant-payment-service): A payment ledger designed to withstand crashes and race conditions: no money lost, duplicated, or overdrawn under 100 concurrent withdrawals, a process killed mid-transaction, and a full Redis blackout.
 
-**Stack**
+[**honors-inventory-system**](https://github.com/nnviet06/honors-inventory-system): Rebuilt a single-user prototype into a multi-user system, migrating from a redeploy-wiped file to a Postgres database behind its own API.
 
-<p>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vert.x-782A90?style=flat-square" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-</p>
+## Stack
 
-Also worked in C, C++, CUDA, TypeScript, React, and Node.
-
-**Reach me** — [LinkedIn](https://www.linkedin.com/in/nnviet/) · [nnviet2016@gmail.com](mailto:nnviet2016@gmail.com)
+- **Backend**: Java, Vert.x, Spring Boot, C#, .NET, PostgreSQL, Oracle, Redis, Kafka, RabbitMQ, gRPC, Docker
+- **Full-stack**: TypeScript, JavaScript, React, Next.js, Node, Express, Python, FastAPI
+- **Research**: C, C++, CUDA, Linux
+- **Extras**: OpenCV, MediaPipe, Google ADK, ElevenLabs
